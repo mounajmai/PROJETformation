@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html class="no-js" lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Welcome!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset("assets/images/apple-touch-icon.png") }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset("assets/images/favicon-32x32.png") }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ asset("assets/images/favicon-16x16.png") }}">
+    {% block stylesheets %}
+        <!-- CSS
+================================================== -->
+        <link rel="stylesheet" href="{{ asset("assets/css/styles.css") }}">
+        <link rel="stylesheet" href="{{ asset("assets/css/vendor.css") }}">
+
+        <!-- script
+        ================================================== -->
+        <script src="{{ asset("assets/js/modernizr.js") }}"></script>
+    {% endblock %}
+</head>
+<body id="top">
+
+{{ include('includes/header.html.twig') }}
+<section class="s-bricks">
+    {% block body %}
+    {% endblock %}
+</section>
+{{ include('includes/footer.html.twig') }}
+
+{% block javascripts %}
+    <!-- Java Script
+================================================== -->
+    <script src="{{ asset("assets/js/jquery-3.2.1.min.js") }}"></script>
+    <script src="{{ asset("assets/js/plugins.js") }}"></script>
+    <script src="{{ asset("assets/js/main.js") }}"></script>
+{% endblock %}
+</body>
+</html>
